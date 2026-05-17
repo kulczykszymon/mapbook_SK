@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 def read_data(users_data: list) -> None:
     for user in users_data:
         print(
-            f'twój znajomy {user['username']} z miejscowości {user["location"]} opublikował {user['posts']} wiadomości. Ostatnia wiadomość {user['usermessage'][-1]}')
+            f'Twój znajomy {user['username']} z miejscowości {user['location']} opublikował {user['posts']} wiadomości. Ostatnia wiadomość {user['usermessage'][-1]}')
 
 
 def add_user(users_data: list) -> None:
@@ -33,7 +33,7 @@ def update_user(users_data: list) -> None:
         if user['username'] == name:
             user['username'] = input('Podaj nowe imię: ')
             user['location'] = input('Podaj nową lokalizację: ')
-            user['posts'] = int(input('Podaj liczbę postów: '))
+            user['posts'] = int(input('Podaj nową liczbę postów: '))
 
 
 def get_coordinates(location: str) -> list:
